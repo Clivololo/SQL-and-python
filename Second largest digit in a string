@@ -1,0 +1,25 @@
+    def secondHighest(self, s: str) -> int:
+    
+        # number list to make sure it's number string
+        num = ['1','2','3','4','5','6','7','8','9','0']
+        
+        # list to filter out the string and put the numbers inside
+        num2 = []
+        
+        # this for loop is to filter out the string and put the numbers inside the num2
+        for x in s:
+            if x in num:
+                num2.append(x)
+               
+        # this list is to put the unique numbers inside        
+        num3 = []
+        # this for loop is to put unique numbers inside and make sure no another digit with the same number inside the list     
+        for y in num2:
+            if y not in num3:
+                num3.append(y)
+        
+        # if the unique number list is less than one (which is only 1 number) return -1 or else return the second largest digit in the list
+        if len(num3) > 1:
+            return int(sorted(num3)[-2])
+        else:
+            return -1
