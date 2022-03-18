@@ -1,1 +1,1 @@
-This is a leetcode question that I just solved tonight.
+This repo is for my progress in programming on Python and MYSQL
