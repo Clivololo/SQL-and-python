@@ -1,0 +1,24 @@
+-- This code is to create the customer table
+Create table If Not Exists Customers (id int, name varchar(255))
+
+-- This code is to create the Order table
+Create table If Not Exists Orders (id int, customerId int)
+
+Truncate table Customers
+
+-- This code is to insert the Customer data inside
+insert into Customers (id, name) values ('1', 'Joe')
+insert into Customers (id, name) values ('2', 'Henry')
+insert into Customers (id, name) values ('3', 'Sam')
+insert into Customers (id, name) values ('4', 'Max')
+
+Truncate table Orders
+
+-- This code is to insert the order inside
+insert into Orders (id, customerId) values ('1', '3')
+insert into Orders (id, customerId) values ('2', '1')
+
+
+-- This code is to display the name of the customers that did not order
+select Customers.name as 'Customers' from Customers
+where Customers.id not in (select Customers.id from Customers join Orders on Orders.customerId = Customers.id);
