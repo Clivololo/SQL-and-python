@@ -21,4 +21,4 @@ insert into Orders (id, customerId) values ('2', '1')
 
 -- This code is to display the name of the customers that did not order
 select Customers.name as 'Customers' from Customers
-where Customers.id not in (select Customers.id from Customers join Orders on Orders.customerId = Customers.id);
+where Customers.id not in (select customerId from Orders);
