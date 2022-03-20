@@ -1,0 +1,11 @@
+# This function is to calculate how many prefix is in a list of words
+def prefixCount(words, pref):
+    # this code is to assign the answer to a int
+    answer = 0
+    # this for loop is to loop through the list of words to see whether or not is there a prefix
+    for x in words:
+        # if there is a prefix add one to the answer
+        if pref == x[:len(pref)]:
+            answer += 1
+            
+    return answer
