@@ -1,0 +1,5 @@
+from datetime import date
+
+# return whether that month has a Friday 13th or not
+def has_friday_13(month, year):
+	return date(year, month, 13).weekday() == 4
