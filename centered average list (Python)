@@ -1,0 +1,3 @@
+# this code is to return the average number of the list without the largest number and the smallest number
+def centered_average(nums):
+  return sum(sorted(nums)[1:-1])/(len(nums)-2)
